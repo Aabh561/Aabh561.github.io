@@ -66,6 +66,17 @@ async function loadConfig(){
   }
   contact.innerHTML = items.join('');
 
+  // Connect row (Hello // Contact links style)
+  const connectParts = [];
+  if(cfg.email) connectParts.push(`<a href=\"mailto:${cfg.email}\">Email</a>`);
+  if(cfg.linkedin_url) connectParts.push(`<a href=\"${cfg.linkedin_url}\" target=\"_blank\" rel=\"noreferrer\">LinkedIn</a>`);
+  if(cfg.github_url || cfg.github_username){
+    const url = cfg.github_url || `https://github.com/${cfg.github_username}`;
+    connectParts.push(`<a href=\"${url}\" target=\"_blank\" rel=\"noreferrer\">GitHub</a>`);
+  }
+  const connectEl = document.getElementById('connect');
+  if(connectEl) connectEl.innerHTML = connectParts.join(' // ');
+
   // Footer
   document.getElementById('year').textContent = String(new Date().getFullYear());
   document.getElementById('footer-name').textContent = cfg.name;

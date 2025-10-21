@@ -9,7 +9,7 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:400 16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
 h1,h2{font-family:Spectral,Georgia,serif;line-height:1.2;margin:0 0 12px}
-h1{font-size:44px;font-weight:700}
+h1{font-size:56px;font-weight:700}
 h2{font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 p{margin:0 0 10px}
 a{color:var(--text);text-decoration:none;border-bottom:1px solid rgba(15,98,254,.25)}
@@ -22,7 +22,7 @@ a:hover{color:var(--accent);border-color:var(--accent)}
 .toc ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
 .toc a{color:var(--muted);text-transform:uppercase;font-size:12px;letter-spacing:.08em}
 .toc a:hover{color:var(--text)}
-.content{min-width:0}
+.content{min-width:0;max-width:760px}
 
 .site-header{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border);z-index:10}
 .nav{display:flex;gap:18px;align-items:center;justify-content:center;padding:10px 16px}
@@ -33,7 +33,7 @@ a:hover{color:var(--accent);border-color:var(--accent)}
 .tagline{color:var(--muted);font-weight:500;font-size:18px}
 .meta{color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
 .cta{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:999px}
 .btn.primary{background:var(--text);color:#fff;border-color:var(--text)}
 
 .section{padding:18px 0}
@@ -59,6 +59,8 @@ a:hover{color:var(--accent);border-color:var(--accent)}
 .contact{list-style:none;padding:0;margin:0}
 .contact li{margin:6px 0}
 
+.connect{margin-top:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:12px}
+.connect a{color:inherit;border:none}
 .footer{border-top:1px solid var(--border);padding:18px;text-align:center;color:var(--muted)}
 
 @media (max-width:900px){
