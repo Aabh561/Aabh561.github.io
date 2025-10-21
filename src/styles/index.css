@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --text:#0b0b0b;
+  --muted:#5b5b5b;
+  --border:#ececec;
+}
+html,body,#root{height:100%}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial; color:var(--text);}
+
+.section-title{ @apply font-serif text-xs tracking-widest uppercase text-gray-500 pb-2 border-b border-gray-200; }
+.badge{ @apply text-xs px-2 py-1 rounded-full border border-gray-200 bg-gray-50; }
+.card{ @apply border border-gray-200 rounded-xl p-4 bg-white; }
+
+/* Smooth anchor scrolling */
+html{ scroll-behavior:smooth }
